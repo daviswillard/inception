@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+    nginx:
+        build: ./requirements/nginx
+        container_name: nginx
+        env_file: .env
+        ports: '443:443'
+        volumes: word_data:/var/www/wordpress
+        restart: always
+        networks: local
+        depends_on: wordpress
+
+    wordpress:
+        build:
+volumes:
+    maria_data:
+    word_data:
