@@ -12,7 +12,10 @@ services:
         depends_on: wordpress
 
     wordpress:
+        container_name: wp
         build:
+        depends_on: mariadb
+        volumes: word_data:/var/www/wordpress
 volumes:
     maria_data:
     word_data:
