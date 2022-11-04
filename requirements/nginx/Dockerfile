@@ -9,3 +9,5 @@ COPY	./tools/entrypoint.sh /
 COPY	./conf/default /etc/nginx/sites-enabled
 
 ENTRYPOINT	["sh", "entrypoint.sh"]
+
+CMD		["nginx", "-g", "daemon off;"]
