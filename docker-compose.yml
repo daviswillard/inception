@@ -11,7 +11,7 @@ services:
         ports:
             - 443:443
         volumes:
-            - /home/dwillard/data/wordpress/:/var/www/wordpress/
+            - wp_data:/var/www/wordpress/
         networks:
             - local
         depends_on:
@@ -22,10 +22,12 @@ services:
         container_name: wp
         restart:        always
 
+        # ports:
+        #    - "9000:9000"
         env_file:
             - .env
         volumes:
-            - /home/dwillard/data/wordpress/:/var/www/wordpress/
+            - wp_data:/var/www/wordpress/
         networks:
             - local
         depends_on:
@@ -35,6 +37,8 @@ services:
         container_name: masha
         restart:        always
 
+        #ports:
+        #    - "3306:3306"
         env_file:
             - .env
         volumes:
@@ -43,7 +47,17 @@ services:
             - local
 volumes:
     sql_data:
-
+        driver:     local
+        driver_opts:
+            o:      bind
+            type:   none
+            device: /home/dwillard/data/mysql
+    wp_data:
+        driver:     local
+        driver_opts:
+            o:      bind
+            type:   none
+            device: /home/dwillard/data/wordpress
 networks:
     local:
         driver: bridge
