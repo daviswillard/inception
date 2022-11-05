@@ -11,7 +11,7 @@ services:
         ports:
             - 443:443
         volumes:
-            - wp_data:/var/www/wordpress/
+            - wp_data:/var/www/wordpress
         networks:
             - local
         depends_on:
@@ -34,7 +34,7 @@ services:
             - mariadb
     mariadb:
         build:          ./requirements/mariadb
-        container_name: masha
+        container_name: mariadb
         restart:        always
 
         #ports:
