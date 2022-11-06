@@ -32,6 +32,7 @@ services:
             - local
         depends_on:
             - mariadb
+
     mariadb:
         build:          ./requirements/mariadb
         container_name: mariadb

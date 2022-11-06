@@ -15,7 +15,6 @@ RUN cd /var/www && tar -xzvf wordpress-5.7.2-ru_RU.tar.gz && \
 
 COPY	./conf/www.conf /etc/php/7.3/fpm/pool.d
 COPY	./conf/wp-config.php /var/www/wordpress/
-COPY	./conf/my.cnf	/etc/mysql/mariadb.conf.d
 COPY	tools/entrypoint.sh /
 
 ENTRYPOINT [ "sh", "entrypoint.sh" ]
