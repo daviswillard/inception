@@ -8,9 +8,9 @@ server {
 
 server {
 	listen 443 ssl;
-	listen [::]:443 ssl;
+#	listen [::]:443 ssl;
 
-	server_name dwillard.42.fr;
+	server_name dwillard.42.fr www.dwillard.42.fr;
 
 	root /var/www/wordpress;
 	index index.php index.html index.htm;
