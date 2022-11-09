@@ -57,6 +57,17 @@ services:
         networks:
             - local
 
+    adminer:
+        container_name: adminer
+        build: ./requirements/bonus/adminer
+        depends_on:
+          - mariadb
+        networks:
+          - local
+        restart: always
+        ports:
+          - 8080:8080
+
 volumes:
     sql_data:
         driver:     local
