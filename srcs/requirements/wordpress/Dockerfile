@@ -8,7 +8,8 @@ RUN		apt-get update \
 			&& apt-get install -y \
 			php$PHP_VERSION \
 			php$PHP_VERSION-fpm \
-			php-mysqli \
+			php$PHP_VERSION-mysqli \
+			php$PHP_VERSION-redis \
 			mariadb-client \
 			curl
 
