@@ -65,6 +65,7 @@ services:
         ports:
           - 8080:8080
 
+#    https://github.com/delfer/docker-alpine-ftp-server/issues/15
     ftp-server:
         container_name: ftp-server
         build:          ./requirements/bonus/ftp-server
