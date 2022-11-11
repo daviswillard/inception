@@ -22,8 +22,6 @@ services:
         container_name: wp
         restart:        always
 
-        # ports:
-        #    - "9000:9000"
         env_file:
             - .env
         volumes:
@@ -38,14 +36,51 @@ services:
         container_name: mariadb
         restart:        always
 
-        #ports:
-        #    - "3306:3306"
         env_file:
             - .env
         volumes:
             - sql_data:/var/lib/mysql
         networks:
             - local
+
+    redis:
+        build:          ./requirements/bonus/redis
+        container_name: redis
+        restart:        always
+
+        ports:
+           - 6379:6379
+        networks:
+            - local
+
+    adminer:
+        container_name: adminer
+        build:          ./requirements/bonus/adminer
+        restart:        always
+
+        depends_on:
+          - mariadb
+        networks:
+          - local
+        ports:
+          - 8080:8080
+
+    ftp-server:
+        container_name: ftp-server
+        build:          ./requirements/bonus/ftp-server
+        restart:        always
+
+        ports:
+            - 21:21
+        depends_on:
+            - wordpress
+        env_file:
+            - .env
+        networks:
+            - local
+        volumes:
+            - wp_data:/home/$FTP_USER/ftp
+
 volumes:
     sql_data:
         driver:     local
