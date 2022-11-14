@@ -82,6 +82,16 @@ services:
         volumes:
             - wp_data:/home/$FTP_USER/ftp
 
+    spring:
+        container_name: spring
+        build:          ./requirements/bonus/html-spring
+        restart:        always
+
+        ports:
+            - 8888:8888
+        networks:
+            - local
+
 volumes:
     sql_data:
         driver:     local
