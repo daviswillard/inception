@@ -50,4 +50,9 @@ wp redis enable \
 
 mkdir -p ./run/php/
 
+if [ ! -d /var/www/wordpress/bonus ]; then
+
+mv /site /var/www/wordpress/bonus
+fi
+
 exec "$@"

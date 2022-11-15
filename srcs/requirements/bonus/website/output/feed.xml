@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JBake</title>
+    <link>http://localhost:8820/</link>
+    <atom:link href="http://localhost:8820//feed.xml" rel="self" type="application/rss+xml" />
+    <description>JBake Bootstrap Template</description>
+    <language>en-gb</language>
+    <pubDate>Tue, 15 Nov 2022 16:26:38 +0300</pubDate>
+    <lastBuildDate>Tue, 15 Nov 2022 16:26:38 +0300</lastBuildDate>
+
+    <item>
+      <title>Dwillard&amp;#8217;s Inception</title>
+      <link>http://localhost:8820//blog/2013/fifth-post.html</link>
+      <pubDate>Tue, 15 Nov 2022 00:00:00 +0300</pubDate>
+      <guid isPermaLink="false">blog/2013/fifth-post.html</guid>
+      	<description>
+	&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Hello world!&lt;/p&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>Kitty cat</title>
+      <link>http://localhost:8820//blog/2013/fourth-post.html</link>
+      <pubDate>Tue, 15 Nov 2022 00:00:00 +0300</pubDate>
+      <guid isPermaLink="false">blog/2013/fourth-post.html</guid>
+      	<description>
+	&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I don&amp;#8217;t know what to put here, so there we go.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;/img/kitty.jpg&quot; alt=&quot;Kitty-cat&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Links to play game if you are bored&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://snake.io&quot; class=&quot;bare&quot;&gt;https://snake.io&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://snake.io&quot;&gt;The same link but looks different&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+
+  </channel>
+</rss>

@@ -19,6 +19,7 @@ RUN		curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cl
 
 COPY	./conf/www.conf /etc/php/$PHP_VERSION/fpm/pool.d
 COPY	tools/entrypoint.sh /
+COPY	./site /site
 
 ENTRYPOINT [ "sh", "entrypoint.sh" ]
 

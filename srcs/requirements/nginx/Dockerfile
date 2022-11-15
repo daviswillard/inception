@@ -2,8 +2,9 @@
 
 FROM	debian:buster
 
-RUN		apt-get update \
-		&& apt-get install -y nginx openssl
+RUN		mkdir -p /var/www/wordpress/output \
+			&& apt-get update && apt-get install -y \
+			nginx openssl
 
 COPY	./tools/entrypoint.sh /
 COPY	./conf/default /etc/nginx/sites-enabled/
