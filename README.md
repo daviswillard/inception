@@ -3,7 +3,7 @@
 A high-performance WordPress deployment using Docker
 
 ### In this project, the following is configured:
-- A Docker container that contains `NGINX with TLSv1.3 only`.
+- A Docker container that contains `NGINX with TLSv1.2 or 1.3 only`.
 - A Docker container that contains `WordPress + php-fpm` (it must be installed and configured) only without nginx.
 - A Docker container that contains `MariaDB` only without nginx.
 - A Docker container that contains `Redis`.
