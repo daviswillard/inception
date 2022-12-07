@@ -12,6 +12,7 @@ A high-performance WordPress deployment using Docker
 - A volume that contains WordPress database.
 - A second volume that contains WordPress website files.
 - A docker-network that establishes the connection between your containers.
+- Portainer - gui network management tool.
 
 ### Setup and management:
 - Customize `srsc/.env` file by replacing values of the variables to your own.
